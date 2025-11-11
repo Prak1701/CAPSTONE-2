@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build:client"
+  publish = "dist"
+
+[context.production.environment]
+  VITE_API_URL = "https://your-backend.example.com" # set to your Flask backend URL
+  JWT_SECRET = "changeme"
+
+[context.deploy-preview.environment]
+  VITE_API_URL = "https://your-backend.example.com"

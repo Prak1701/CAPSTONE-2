@@ -1,0 +1,181 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Brand: Blue primary, Green accent */
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 152 60% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 221 83% 53%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 152 60% 40%;
+
+    --sidebar-accent-foreground: 0 0% 100%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 221 83% 53%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 221 83% 56%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 152 60% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 221 83% 56%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 221 83% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 152 60% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 221 83% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Ensure form controls and select options always use the foreground color and proper background for contrast */
+  input,
+  select,
+  textarea,
+  option,
+  .radix-select-trigger,
+  .radix-select-value {
+    color: hsl(var(--foreground));
+    background: hsl(var(--card));
+    -webkit-text-fill-color: hsl(var(--foreground));
+  }
+
+  /* Placeholder color */
+  ::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Ensure Select dropdown items are readable */
+  .radix-select-content,
+  .radix-select-item {
+    color: hsl(var(--popover-foreground));
+    background: hsl(var(--popover));
+  }
+
+  /* Prevent dialog overlay from blocking interactions unless it's open */
+  .fixed.inset-0.z-50[data-state="closed"],
+  .fixed.inset-0.z-50:not([data-state="open"]) {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .fixed.inset-0.z-50[data-state="open"] {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  /* Hero tweaks */
+  .hero-figure {
+    @apply rounded-2xl overflow-hidden shadow-2xl border border-transparent/10;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(10,25,41,0.25), rgba(255,255,255,0.02));
+    mix-blend-mode: multiply;
+  }
+
+  .hero-title {
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  /* role color helpers */
+  .role-university { --primary: 212 86% 36%; --accent: 152 60% 40%; }
+  .role-student { --primary: 152 60% 40%; --accent: 212 86% 36%; }
+  .role-employer { --primary: 218 9% 46%; --accent: 210 15% 60%; }
+
+  /* subtle card hover */
+  .card-hover:hover { transform: translateY(-6px); transition: transform 200ms ease, box-shadow 200ms ease; }
+
+  /* responsive utilities */
+  @screen sm {
+    .hero-title { font-size: 2.5rem; }
+  }
+  @screen md {
+    .hero-title { font-size: 3.25rem; }
+  }
+  @screen lg {
+    .hero-title { font-size: 4rem; }
+  }
+}
