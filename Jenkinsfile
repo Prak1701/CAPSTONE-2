@@ -40,20 +40,17 @@ pipeline {
                     // 1. Aggressive Cleanup of known previous projects
                     bat 'docker-compose -p capstone-2 down --remove-orphans || echo "capstone-2 not found"'
                     
-                    // 2. Kill ANY process holding port 27018 (The "Nuclear" Fix)
-                    // We use "; exit 0" to force success even if no process is found
-                    bat 'powershell -Command "Stop-Process -Id (Get-NetTCPConnection -LocalPort 27018 -ErrorAction SilentlyContinue).OwningProcess -Force -ErrorAction SilentlyContinue; exit 0"'
-
-                    // 3. Run the Port Killer Script for Containers (PowerShell)
+                    // 2. Run the Port Killer Script for Containers (PowerShell)
+                    // This safely removes CONTAINERS using the ports, without killing the Docker Daemon
                     bat 'powershell -Command "docker ps -q | ForEach-Object { docker inspect --format \'{{.Id}} {{range $p, $conf := .NetworkSettings.Ports}}{{$p}} {{end}}\' $_ } | Select-String \'27018|5000|8081\' | ForEach-Object { docker rm -f ($_.ToString().Split(\' \')[0]) }; exit 0"'
                     
-                    // 4. Standard Cleanup
+                    // 3. Standard Cleanup
                     bat 'docker-compose down --remove-orphans || echo "Clean start"'
                     
-                    // 5. Wait for ports to release
+                    // 4. Wait for ports to release
                     bat 'ping 127.0.0.1 -n 6 > nul' // Wait 5 seconds
                     
-                    // 6. Start Fresh
+                    // 5. Start Fresh
                     bat 'docker-compose up -d --build'
                 }
             }
