@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         PYTHON_ENV = 'venv'
+        COMPOSE_PROJECT_NAME = 'capstone-prod' // Enforce consistent container names
     }
 
     stages {
@@ -35,6 +36,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
+                // Stop any existing containers to avoid port conflicts
+                bat 'docker-compose down || echo "No containers to stop"'
                 bat 'docker-compose up -d --build'
             }
         }
