@@ -43,7 +43,7 @@ pipeline {
             steps {
                 script {
                     echo "Waiting for services to start..."
-                    bat 'timeout /t 20' // Wait 20 seconds for containers to initialize
+                    bat 'ping 127.0.0.1 -n 21 > nul' // Wait 20 seconds (ping hack for Jenkins)
                     
                     echo "Checking Backend Health..."
                     bat 'curl -f http://localhost:5000/ || echo Backend not ready yet'
