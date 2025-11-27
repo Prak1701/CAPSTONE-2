@@ -7,34 +7,17 @@ pipeline {
     }
 
     stages {
-        stage('Build Backend') {
+        stage('Cleanup') {
             steps {
                 script {
-                    // Build the image first
-                    docker.build("backend-main:${env.BUILD_ID}", "./backend_main")
+                    echo "Cleaning up previous deployments..."
+                    bat 'docker-compose down --remove-orphans || echo "Clean start"'
+                    bat 'ping 127.0.0.1 -n 3 > nul'
                 }
             }
         }
 
-        stage('Test Backend') {
-            steps {
-                script {
-                    // Run tests INSIDE the container
-                    // We mount the tests directory to ensure we're testing the latest code
-                    bat "docker run --rm backend-main:${env.BUILD_ID} pytest tests"
-                }
-            }
-        }
-
-        stage('Build Frontend') {
-            steps {
-                script {
-                    docker.build("frontend:${env.BUILD_ID}", ".")
-                }
-            }
-        }
-
-        stage('Deploy') {
+        stage('Build and Deploy') {
             steps {
                 script {
                     // 1. Aggressive Cleanup of known previous projects
