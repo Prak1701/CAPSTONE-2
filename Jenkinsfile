@@ -32,6 +32,32 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy') {
+            steps {
+                bat 'docker-compose up -d --build'
+            }
+        }
+
+        stage('Verify Deployment') {
+            steps {
+                script {
+                    echo "Waiting for services to start..."
+                    bat 'timeout /t 20' // Wait 20 seconds for containers to initialize
+                    
+                    echo "Checking Backend Health..."
+                    bat 'curl -f http://localhost:5000/ || echo Backend not ready yet'
+                    
+                    echo "Checking Frontend Health..."
+                    bat 'curl -f http://localhost:8081/ || echo Frontend not ready yet'
+                    
+                    echo "---------------------------------------------------"
+                    echo "   DEPLOYMENT SUCCESSFUL!   "
+                    echo "   Open your browser to: http://localhost:8081   "
+                    echo "---------------------------------------------------"
+                }
+            }
+        }
     }
 
     post {
