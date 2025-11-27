@@ -36,9 +36,15 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Stop any existing containers to avoid port conflicts
-                bat 'docker-compose down || echo "No containers to stop"'
-                bat 'docker-compose up -d --build'
+                script {
+                    // Aggressively kill ANY container using our ports (27018, 5000, 8081)
+                    // This fixes the "Port already allocated" error from old/orphan containers
+                    bat 'powershell -Command "docker ps -q | ForEach-Object { docker inspect --format \'{{.Id}} {{range $p, $conf := .NetworkSettings.Ports}}{{$p}} {{end}}\' $_ } | Select-String \'27018|5000|8081\' | ForEach-Object { docker rm -f ($_.ToString().Split(\' \')[0]) }"'
+                    
+                    // Also run standard down to be safe
+                    bat 'docker-compose down --remove-orphans || echo "Clean start"'
+                    bat 'docker-compose up -d --build'
+                }
             }
         }
 
