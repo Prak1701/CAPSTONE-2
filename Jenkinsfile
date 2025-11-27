@@ -39,11 +39,10 @@ pipeline {
                 script {
                     // 1. Aggressive Cleanup of known previous projects
                     bat 'docker-compose -p capstone-2 down --remove-orphans || echo "capstone-2 not found"'
-                    bat 'docker-compose -p capstone-22 down --remove-orphans || echo "capstone-22 not found"'
                     
                     // 2. Kill ANY process holding port 27018 (The "Nuclear" Fix)
-                    // This finds the PID listening on 27018 and kills it, whether it's Docker or something else.
-                    bat 'powershell -Command "Get-NetTCPConnection -LocalPort 27018 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }"'
+                    // We add "|| echo..." to ensure the build doesn't fail if the port is already free
+                    bat 'powershell -Command "Get-NetTCPConnection -LocalPort 27018 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }" || echo "Port 27018 is free"'
 
                     // 3. Run the Port Killer Script for Containers (PowerShell)
                     bat 'powershell -Command "docker ps -q | ForEach-Object { docker inspect --format \'{{.Id}} {{range $p, $conf := .NetworkSettings.Ports}}{{$p}} {{end}}\' $_ } | Select-String \'27018|5000|8081\' | ForEach-Object { docker rm -f ($_.ToString().Split(\' \')[0]) }"'
