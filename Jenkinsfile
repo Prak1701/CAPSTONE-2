@@ -37,12 +37,24 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    // Aggressively kill ANY container using our ports (27018, 5000, 8081)
-                    // This fixes the "Port already allocated" error from old/orphan containers
+                    // 1. Aggressive Cleanup of known previous projects
+                    bat 'docker-compose -p capstone-2 down --remove-orphans || echo "capstone-2 not found"'
+                    bat 'docker-compose -p capstone-22 down --remove-orphans || echo "capstone-22 not found"'
+                    
+                    // 2. Kill ANY process holding port 27018 (The "Nuclear" Fix)
+                    // This finds the PID listening on 27018 and kills it, whether it's Docker or something else.
+                    bat 'powershell -Command "Get-NetTCPConnection -LocalPort 27018 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }"'
+
+                    // 3. Run the Port Killer Script for Containers (PowerShell)
                     bat 'powershell -Command "docker ps -q | ForEach-Object { docker inspect --format \'{{.Id}} {{range $p, $conf := .NetworkSettings.Ports}}{{$p}} {{end}}\' $_ } | Select-String \'27018|5000|8081\' | ForEach-Object { docker rm -f ($_.ToString().Split(\' \')[0]) }"'
                     
-                    // Also run standard down to be safe
+                    // 4. Standard Cleanup
                     bat 'docker-compose down --remove-orphans || echo "Clean start"'
+                    
+                    // 5. Wait for ports to release
+                    bat 'ping 127.0.0.1 -n 6 > nul' // Wait 5 seconds
+                    
+                    // 6. Start Fresh
                     bat 'docker-compose up -d --build'
                 }
             }
