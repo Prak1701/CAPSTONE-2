@@ -1,0 +1,4 @@
+  File "backend_main/app.py", line 349
+    details_html += f\"\"\"
+                      ^
+SyntaxError: unexpected character after line continuation character

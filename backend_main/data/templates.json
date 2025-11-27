@@ -1,0 +1,176 @@
+{
+  "dea1331d-e7ea-4b34-b519-3abcb9d1cf2f": {
+    "filename": "template_dea1331d-e7ea-4b34-b519-3abcb9d1cf2f.png",
+    "layout": {
+      "qr_position": [
+        1000,
+        800
+      ],
+      "qr_size": 150,
+      "name_position": [
+        100,
+        200
+      ],
+      "cert_no_position": [
+        100,
+        260
+      ],
+      "date_position": [
+        100,
+        320
+      ]
+    },
+    "uploaded_by": "prakritinegi@st.niituniversity.in",
+    "uploaded_at": "2025-11-22T15:52:18.937784"
+  },
+  "a3c1294f-b844-4c17-9343-f8585c94d27b": {
+    "filename": "template_a3c1294f-b844-4c17-9343-f8585c94d27b.png",
+    "layout": {
+      "qr_position": [
+        1000,
+        800
+      ],
+      "qr_size": 150,
+      "name_position": [
+        100,
+        200
+      ],
+      "cert_no_position": [
+        100,
+        260
+      ],
+      "date_position": [
+        100,
+        320
+      ]
+    },
+    "uploaded_by": "prakritinegi@st.niituniversity.in",
+    "uploaded_at": "2025-11-23T08:41:54.460656"
+  },
+  "a7b1f13a-9086-480e-a352-db547f73c7d9": {
+    "filename": "template_a7b1f13a-9086-480e-a352-db547f73c7d9.png",
+    "layout": {
+      "qr_position": [
+        1000,
+        800
+      ],
+      "qr_size": 150,
+      "name_position": [
+        100,
+        200
+      ],
+      "cert_no_position": [
+        100,
+        260
+      ],
+      "date_position": [
+        100,
+        320
+      ]
+    },
+    "uploaded_by": "prakritinegi@st.niituniversity.in",
+    "uploaded_at": "2025-11-23T08:49:24.358531"
+  },
+  "0e2fee26-90ca-451c-868e-dcc25ede392f": {
+    "filename": "template_0e2fee26-90ca-451c-868e-dcc25ede392f.png",
+    "layout": {
+      "qr_position": [
+        1000,
+        800
+      ],
+      "qr_size": 150,
+      "name_position": [
+        100,
+        200
+      ],
+      "cert_no_position": [
+        100,
+        260
+      ],
+      "date_position": [
+        100,
+        320
+      ]
+    },
+    "uploaded_by": "prakritinegi@st.niituniversity.in",
+    "uploaded_at": "2025-11-23T08:59:34.039437"
+  },
+  "aa231572-6165-4b90-a7e9-f931aeed7ff0": {
+    "filename": "template_aa231572-6165-4b90-a7e9-f931aeed7ff0.png",
+    "layout": {
+      "qr_position": [
+        1000,
+        800
+      ],
+      "qr_size": 150,
+      "font_size": 36,
+      "font_size_small": 24,
+      "name_position": [
+        100,
+        200
+      ],
+      "cert_no_position": [
+        100,
+        260
+      ],
+      "date_position": [
+        100,
+        320
+      ]
+    },
+    "uploaded_by": "prakritinegi@st.niituniversity.in",
+    "uploaded_at": "2025-11-24T04:05:33.715297"
+  },
+  "8266eadd-3dc0-47ce-9cd2-43efdb782046": {
+    "filename": "template_8266eadd-3dc0-47ce-9cd2-43efdb782046.png",
+    "layout": {
+      "qr_position": [
+        1000,
+        800
+      ],
+      "qr_size": 150,
+      "font_size": 36,
+      "font_size_small": 24,
+      "name_position": [
+        100,
+        200
+      ],
+      "cert_no_position": [
+        100,
+        260
+      ],
+      "date_position": [
+        100,
+        320
+      ]
+    },
+    "uploaded_by": "prakritinegi@st.niituniversity.in",
+    "uploaded_at": "2025-11-24T12:12:54.655959"
+  },
+  "8a0401c4-024c-4d9d-9836-608924bb6eff": {
+    "filename": "template_8a0401c4-024c-4d9d-9836-608924bb6eff.png",
+    "layout": {
+      "qr_position": [
+        1000,
+        800
+      ],
+      "qr_size": 150,
+      "font_size": 36,
+      "font_size_small": 24,
+      "name_position": [
+        100,
+        200
+      ],
+      "cert_no_position": [
+        100,
+        260
+      ],
+      "date_position": [
+        100,
+        320
+      ]
+    },
+    "uploaded_by": "prakritinegi@st.niituniversity.in",
+    "uploaded_at": "2025-11-24T13:06:12.955197"
+  }
+}

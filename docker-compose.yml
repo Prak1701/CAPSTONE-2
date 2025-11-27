@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - NODE_ENV=production
+      - PORT=8081
+    depends_on:
+      - backend_main
+      - mongo
+
+  backend_main:
+    build: ./backend_main
+    ports:
+      - "5000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/CAPSTONE-2
+      - FLASK_ENV=development
+      - HOST_IP=172.19.21.60
+    depends_on:
+      - mongo
+    volumes:
+      - ./backend_main:/app
+      - cert_volume:/app/data/certs
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
+  cert_volume:

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: certificate-backend
+  labels:
+    app: certificate-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: certificate-backend
+  template:
+    metadata:
+      labels:
+        app: certificate-backend
+    spec:
+      containers:
+      - name: backend
+        image: certificate-backend:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGO_URI
+          value: "mongodb://mongo-service:27017/cp_db"
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"

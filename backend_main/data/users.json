@@ -1,0 +1,83 @@
+[
+  {
+    "username": "Test Student User",
+    "email": "student_1764253023@test.com",
+    "password": "scrypt:32768:8:1$oXqEQPCzq0FOycl1$52eff0a35acc689efaf6e4034f1d582015804dcc6783ddd50dea55c76703fb10e450785724022b3466b895701bbb1071cf6ec05e2f8d7838ebd253d66d01db2a",
+    "role": "student",
+    "verified": true,
+    "created_at": "2025-11-27T14:17:03.402332",
+    "id": 1
+  },
+  {
+    "username": "Test Student User",
+    "email": "login_1764253023@test.com",
+    "password": "scrypt:32768:8:1$wQ8nwFMEWZ3lZuli$f9e4c225b95f0411c51b39b2ac41d7d44b5a1312ee2dc3fd271555f0cd1e6f827ff89077c20a2a3de13d23ce58ff75903c796a32be76a45258583524942fdf08",
+    "role": "student",
+    "verified": true,
+    "created_at": "2025-11-27T14:17:03.532326",
+    "id": 2
+  },
+  {
+    "username": "Test Student User",
+    "email": "test.student@example.com",
+    "password": "scrypt:32768:8:1$QFuFdIvsCwMvlsH2$ce5caf8c0154d27c3645b9b666a85da737a0f83026f9605bf6aca1c665694b05e2d7138fc05b5439e6bbb3a8595dc8b8dc9cda5013469fb97e8e7c9341e8d658",
+    "role": "student",
+    "verified": true,
+    "created_at": "2025-11-27T14:17:03.785903",
+    "id": 3
+  },
+  {
+    "username": "Test University",
+    "email": "uni_1764253041@st.niituniversity.in",
+    "password": "scrypt:32768:8:1$bDYh3UrlI2OAXpoT$eccfcb176994347ce6451905d89ef3565fa752c47f74392fe91c416a01fa71cec8bd55ed312776d08be29e00bd82288cb29e996ec8b1004249b100a57fad4fe3",
+    "role": "university",
+    "verified": true,
+    "created_at": "2025-11-27T14:17:21.146341",
+    "id": 4
+  },
+  {
+    "username": "Test Student User",
+    "email": "student_1764253041@test.com",
+    "password": "scrypt:32768:8:1$zo3YCGi1KJw23fOK$ebb25fcb1be78a79e2051bc63eb2b49f1e9d7c7b481c9196f6507a9aabac2b1990b4aada5f25ea902b0e0205c92ac2b4a79625ba2df58e19b918d352d4f5d090",
+    "role": "student",
+    "verified": true,
+    "created_at": "2025-11-27T14:17:21.298321",
+    "id": 5
+  },
+  {
+    "username": "Test Student User",
+    "email": "login_1764253041@test.com",
+    "password": "scrypt:32768:8:1$DPXOen3p2tIQcdy4$848767c371d6c3307c2d4d8e727df1798f54a3780c84392512037bd125d41363de5879d73403d9b077a2c8c26f20d1dc8768c97802946a0584e87034d0fc7d47",
+    "role": "student",
+    "verified": true,
+    "created_at": "2025-11-27T14:17:21.427592",
+    "id": 6
+  },
+  {
+    "username": "Test University",
+    "email": "uni_1764253092@st.niituniversity.in",
+    "password": "scrypt:32768:8:1$j9wEW5txg3Z8ZJJ4$35c2438ac6d799719fd683f842b21b0736233120acf50b24584132596c1e568f13afcbebd791fd7509270f685e6a5541910633d6d5a8cd549324b67834012cd9",
+    "role": "university",
+    "verified": true,
+    "created_at": "2025-11-27T14:18:12.260782",
+    "id": 7
+  },
+  {
+    "username": "Test Student User",
+    "email": "student_1764253092@test.com",
+    "password": "scrypt:32768:8:1$biGNTNbzhapxJfai$e5a4b049c6b0e73d56a592a0f756065c48528be6de5ec50946d019b709b78a4bb3e59e51b33993ec6a24c5d1bd22a1ad2e6765232513593d6432802654e09d8a",
+    "role": "student",
+    "verified": true,
+    "created_at": "2025-11-27T14:18:12.387997",
+    "id": 8
+  },
+  {
+    "username": "Test Student User",
+    "email": "login_1764253092@test.com",
+    "password": "scrypt:32768:8:1$EaKERLW8iwqso9bO$2daec5dc6c16c21dc99b83748d54bbe92569081af4676893fc534f67c83def3fc78a7fcba4be9be1162a2fbf70d5621ce8f3b5b171d502dbb8bfaaf4f9fd9b9e",
+    "role": "student",
+    "verified": true,
+    "created_at": "2025-11-27T14:18:12.514182",
+    "id": 9
+  }
+]
