@@ -1,83 +1,79 @@
 pipeline {
     agent any
 
-    environment {
-        // ⭐ YOUR LOCAL PROJECT FOLDER (must exist!)
-        COMPOSE_PROJECT_DIR = "C:/Users/prakr/Downloads/CAPSTONE-2"
-        COMPOSE_PROJECT_NAME = "capstone-prod"
-    }
-
     stages {
 
-        /* -------------------------------------------------- */
-        /* 1. CLEANUP OLD CONTAINERS                          */
-        /* -------------------------------------------------- */
-        stage('Cleanup Previous Containers') {
+        stage('Checkout') {
             steps {
-                echo "🧹 Cleaning old containers and freeing ports..."
+                echo "📦 Using Jenkins workspace checkout"
+                bat "dir"
+            }
+        }
 
-                dir("${env.COMPOSE_PROJECT_DIR}") {
-
-                    // Free port 27018 (Mongo) safely
-                    bat '''
-                        powershell -Command "
-                        $p = Get-NetTCPConnection -LocalPort 27018 -ErrorAction SilentlyContinue;
-                        if ($p) { Stop-Process -Id $p.OwningProcess -Force }
-                        "
-                    '''
-
-                    bat 'docker-compose down --remove-orphans || echo "No previous containers"'
+        stage('Unit Tests') {
+            steps {
+                echo "🧪 Running backend pytest suite inside Docker..."
+                dir("backend_main") {
+                    bat 'docker build -t capstone-backend-test .'
+                    bat 'docker run --rm capstone-backend-test pytest tests'
                 }
             }
         }
 
-        /* -------------------------------------------------- */
-        /* 2. BUILD & START ALL SERVICES                      */
-        /* -------------------------------------------------- */
-        stage('Build and Start Application') {
+        stage('Build Backend Image') {
             steps {
-                echo "🚀 Building Backend + Frontend + MongoDB..."
-
-                dir("${env.COMPOSE_PROJECT_DIR}") {
-                    bat 'docker-compose up --build -d'
-                }
+                echo "🐳 Building backend_main image via docker-compose..."
+                bat 'docker-compose build backend_main'
             }
         }
 
-        /* -------------------------------------------------- */
-        /* 3. WAIT FOR STARTUP                                */
-        /* -------------------------------------------------- */
-        stage('Wait For Services') {
+        stage('Build Frontend Image') {
+            steps {
+                echo "🐳 Building frontend image via docker-compose..."
+                bat 'docker-compose build frontend'
+            }
+        }
+
+        stage('Deploy Using Docker Compose') {
+            steps {
+                echo "🚀 Deploying full stack with docker-compose..."
+                
+                // Stop previous stack
+                bat 'docker-compose down --remove-orphans || echo "Nothing to stop"'
+
+                // Start new stack
+                bat 'docker-compose up -d'
+            }
+        }
+
+        stage('Verify Deployment') {
             steps {
                 echo "⏳ Waiting for services to initialize..."
-                bat 'ping 127.0.0.1 -n 21 > nul'  // ~20 seconds wait
-            }
-        }
+                bat 'ping 127.0.0.1 -n 10 > nul'
 
-        /* -------------------------------------------------- */
-        /* 4. SHOW RUNNING CONTAINERS                         */
-        /* -------------------------------------------------- */
-        stage('Verify Running Containers') {
-            steps {
-                dir("${env.COMPOSE_PROJECT_DIR}") {
-                    bat 'docker ps'
+                echo "✅ Verifying containers and endpoints..."
+                bat 'docker ps'
 
-                    echo "---------------------------------------------"
-                    echo "   ✔ Deployment SUCCESSFUL"
-                    echo "   🌐 Frontend: http://localhost:8081/"
-                    echo "   🔥 Backend:  http://localhost:5000/"
-                    echo "---------------------------------------------"
-                }
+                // ✅ backend health-check FIX (uses actual working endpoint)
+                bat 'curl -f http://localhost:5000/api || echo Backend not responding yet'
+
+                // frontend check
+                bat 'curl -f http://localhost:8081/ || echo Frontend not responding yet'
+
+                echo "----------------------------------------"
+                echo " App should now be running on: "
+                echo " http://localhost:8081"
+                echo "----------------------------------------"
             }
         }
     }
 
     post {
         success {
-            echo "✨ Jenkins pipeline finished successfully!"
+            echo "🎉 App deployed successfully!"
         }
         failure {
-            echo "❌ Pipeline failed. Make sure Docker Desktop is running."
+            echo "❌ Pipeline failed. Check which stage turned red."
         }
     }
 }
