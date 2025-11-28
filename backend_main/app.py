@@ -1639,19 +1639,41 @@ def verify_token_endpoint():
 def generate_qr():
     body = request.get_json() or {}
     student_id = body.get("student_id")
+    cert_id = body.get("cert_id")
+    
     student = find_student_by_id(student_id)
     if not student:
         return jsonify({"error": "Student not found"}), 404
-    payload = {"student_id": student_id, "timestamp": datetime.datetime.utcnow().isoformat()}
-    data = json.dumps(payload)
+        
+    # Generate verification URL
+    host_ip = os.environ.get("HOST_IP", "auto")
+    if not host_ip or host_ip == "auto":
+        host_ip = get_local_ip()
+    
+    # If cert_id is not provided, try to find the latest one
+    if not cert_id:
+        certs = load_certificates()
+        # Find latest cert for this student
+        student_certs = [c for c in certs if str(c.get("student_id")) == str(student_id)]
+        if student_certs:
+            # Sort by cert_id descending
+            student_certs.sort(key=lambda x: x.get("cert_id", 0), reverse=True)
+            cert_id = student_certs[0].get("cert_id")
+    
+    if not cert_id:
+         return jsonify({"error": "No certificate found for this student"}), 404
+
+    token = make_token({"student_id": student_id, "cert_id": cert_id})
+    verification_url = f"http://{host_ip}:5000/verify?token={token}"
+    
     qr = qrcode.QRCode(box_size=10, border=2)
-    qr.add_data(data)
+    qr.add_data(verification_url)
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
     buffered = io.BytesIO()
     img.save(buffered, format="PNG")
     img_b64 = base64.b64encode(buffered.getvalue()).decode("utf-8")
-    return jsonify({"qr_base64": img_b64, "payload": payload})
+    return jsonify({"qr_base64": img_b64, "url": verification_url})
 
 # Employer search
 @app.route("/employer/search", methods=["GET"])

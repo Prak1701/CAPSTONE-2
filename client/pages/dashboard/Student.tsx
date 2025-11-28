@@ -33,13 +33,15 @@ export default function StudentDashboard() {
       // Use student_record_id from certificate, or fallback to student_id from certificate
       const cert = certs[0];
       const studentId = cert.student_record_id || cert.student_id;
+      const certId = cert.cert_id; // Get cert_id
+
       if (!studentId) {
         alert("Student ID not found in certificate");
         return;
       }
       const data = await api("/generate_qr", {
         method: "POST",
-        body: JSON.stringify({ student_id: studentId }),
+        body: JSON.stringify({ student_id: studentId, cert_id: certId }),
       });
       setQr(data.qr_base64);
     } catch (err: any) {
@@ -47,19 +49,7 @@ export default function StudentDashboard() {
     }
   };
 
-  const verify = async () => {
-    if (!myRecord) return alert("No record");
-    try {
-      const user = JSON.parse(localStorage.getItem("user") || "null");
-      const data = await api("/blockchain/verify", {
-        method: "POST",
-        body: JSON.stringify({ student_id: user.id }),
-      });
-      alert(data.valid ? "Valid on blockchain" : "Invalid or missing proof");
-    } catch (err: any) {
-      alert(JSON.stringify(err));
-    }
-  };
+  // Verify function removed as requested
 
   return (
     <main className="container py-10">
@@ -89,9 +79,6 @@ export default function StudentDashboard() {
                 </div>
                 <div className="mt-4 flex gap-3">
                   <Button onClick={genQr}>Generate QR</Button>
-                  <Button variant="ghost" onClick={verify}>
-                    Verify on Blockchain
-                  </Button>
                 </div>
 
                 <div className="mt-6">
