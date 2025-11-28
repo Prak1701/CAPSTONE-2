@@ -26,7 +26,7 @@ services:
       - mongo
     volumes:
       - ./backend_main:/app
-      - cert_volume:/app/data/certs
+      - backend_data:/app/data # <<<<<< FIXED HERE
 
   mongo:
     image: mongo:latest
@@ -37,4 +37,4 @@ services:
 
 volumes:
   mongo_data:
-  cert_volume:
+  backend_data:
