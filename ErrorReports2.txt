@@ -1,0 +1,62 @@
+Potential Error Report for CAPSTONE-2 Project
+Generated on: 2025-11-28
+
+1. Critical Issues
+------------------
+[ ] Syntax Error in backend_main/app.py
+    - Source: compile_error.txt
+    - Location: Line 349 (approximate)
+    - Error: SyntaxError: unexpected character after line continuation character
+    - Note: The error log suggests an issue with f-string or line continuation. Inspection of the file shows `s.close()` at line 349, but `details_html += f"""` at line 395. The error might be due to a backslash in the previous line or a mismatch between the file on disk and the error log.
+
+2. Security & Configuration Risks
+---------------------------------
+[ ] Auto-generated JWT Secret
+    - File: backend_main/app.py
+    - Issue: If `JWT_SECRET` is not in env/config, it is auto-generated using `uuid`.
+    - Risk: If the application restarts and the config file is not persistent, all existing tokens will become invalid.
+
+[ ] Hardcoded Defaults
+    - File: backend_main/app.py
+    - Issue: `ALLOWED_UNIVERSITY_DOMAIN` defaults to "st.niituniversity.in".
+    - Risk: This limits the application to a specific domain unless overridden by environment variables.
+
+[ ] Weak Error Handling in Email Sending
+    - File: server/index.ts
+    - Issue: `transporter.sendMail` is called within a try-catch block in the upload route, but failures are only logged (`console.error`).
+    - Risk: Users might not be notified if email sending fails.
+
+3. Code Quality & Maintainability
+---------------------------------
+[ ] Extensive Use of 'any' Type
+    - File: server/index.ts
+    - Issue: TypeScript `any` type is used frequently (e.g., `req.file as any`, `transporter: any`).
+    - Risk: Defeats the purpose of TypeScript, leading to potential runtime errors.
+
+[ ] Monolithic File Structure
+    - File: backend_main/app.py
+    - Issue: The file is over 1700 lines long, containing logic for auth, database, certificate generation, and API routes.
+    - Risk: Hard to maintain, test, and debug. Recommendation: Refactor into blueprints/modules.
+
+[ ] Dual Database Mode
+    - File: backend_main/app.py
+    - Issue: The app falls back to JSON storage if MongoDB is unavailable.
+    - Risk: This can lead to "split-brain" data scenarios where some data is in Mongo and some in JSON, causing inconsistencies.
+
+4. Potential Runtime Errors
+---------------------------
+[ ] Network Dependency in IP Detection
+    - File: backend_main/app.py
+    - Function: `get_local_ip`
+    - Issue: Attempts to connect to 8.8.8.8 to determine local IP.
+    - Risk: Will fail or hang if there is no internet connection (though handled by try-except, it falls back to 127.0.0.1 which might break external access).
+
+[ ] File System Operations
+    - File: server/index.ts
+    - Issue: Uses `fs.renameSync` for file uploads.
+    - Risk: `renameSync` can fail if the source and destination are on different file systems (e.g., across Docker volumes). Recommendation: Use `fs.copyFileSync` + `fs.unlinkSync` or a library like `mv`.
+
+5. Missing Documentation/Tests
+------------------------------
+[ ] Missing Server Tests
+    - Observation: While `backend_main` has a `tests` directory, the `server` (TypeScript) component lacks visible dedicated tests in its directory.
