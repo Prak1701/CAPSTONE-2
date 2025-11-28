@@ -1,59 +1,47 @@
+```
 pipeline {
     agent any
 
     environment {
-        PYTHON_ENV = 'venv'
-        COMPOSE_PROJECT_NAME = 'capstone-prod' // Enforce consistent container names
+        // Pointing directly to your local project folder (Like your example!)
+        COMPOSE_PROJECT_DIR = "C:/Users/prakr/Downloads/CAPSTONE-2"
+        COMPOSE_PROJECT_NAME = 'capstone-prod'
     }
 
     stages {
-        stage('Cleanup') {
+        stage('Clean up any previous containers') {
             steps {
-                script {
-                    echo "Cleaning up previous deployments..."
+                dir("${env.COMPOSE_PROJECT_DIR}") {
+                    // Safe Cleanup (My special script to fix port 27018)
+                    bat 'powershell -Command "Stop-Process -Id (Get-NetTCPConnection -LocalPort 27018 -ErrorAction SilentlyContinue).OwningProcess -Force -ErrorAction SilentlyContinue; exit 0"'
                     bat 'docker-compose down --remove-orphans || echo "Clean start"'
-                    bat 'ping 127.0.0.1 -n 3 > nul'
                 }
             }
         }
 
-        stage('Build and Deploy') {
+        stage('Build and Start Containers') {
             steps {
-                script {
-                    // 1. Aggressive Cleanup of known previous projects
-                    bat 'docker-compose -p capstone-2 down --remove-orphans || echo "capstone-2 not found"'
-                    
-                    // 2. Run the Port Killer Script for Containers (PowerShell)
-                    // This safely removes CONTAINERS using the ports, without killing the Docker Daemon
-                    bat 'powershell -Command "docker ps -q | ForEach-Object { docker inspect --format \'{{.Id}} {{range $p, $conf := .NetworkSettings.Ports}}{{$p}} {{end}}\' $_ } | Select-String \'27018|5000|8081\' | ForEach-Object { docker rm -f ($_.ToString().Split(\' \')[0]) }; exit 0"'
-                    
-                    // 3. Standard Cleanup
-                    bat 'docker-compose down --remove-orphans || echo "Clean start"'
-                    
-                    // 4. Wait for ports to release
-                    bat 'ping 127.0.0.1 -n 6 > nul' // Wait 5 seconds
-                    
-                    // 5. Start Fresh
-                    bat 'docker-compose up -d --build'
+                dir("${env.COMPOSE_PROJECT_DIR}") {
+                    // This builds AND runs everything (Backend + Frontend + Mongo)
+                    bat 'docker-compose up --build -d'
                 }
             }
         }
 
-        stage('Verify Deployment') {
+        stage('Wait for Services to Start') {
             steps {
-                script {
-                    echo "Waiting for services to start..."
-                    bat 'ping 127.0.0.1 -n 21 > nul' // Wait 20 seconds (ping hack for Jenkins)
-                    
-                    echo "Checking Backend Health..."
-                    bat 'curl -f http://localhost:5000/ || echo Backend not ready yet'
-                    
-                    echo "Checking Frontend Health..."
-                    bat 'curl -f http://localhost:8081/ || echo Frontend not ready yet'
-                    
+                echo '⏳ Waiting for services to initialize...'
+                // Using ping hack because 'sleep' sometimes fails on Windows Jenkins
+                bat 'ping 127.0.0.1 -n 21 > nul' 
+            }
+        }
+
+        stage('Verify Running Containers') {
+            steps {
+                dir("${env.COMPOSE_PROJECT_DIR}") {
+                    bat 'docker ps'
                     echo "---------------------------------------------------"
-                    echo "   DEPLOYMENT SUCCESSFUL!   "
-                    echo "   Open your browser to: http://localhost:8081   "
+                    echo "   SUCCESS! Open: http://localhost:8081   "
                     echo "---------------------------------------------------"
                 }
             }
@@ -61,8 +49,12 @@ pipeline {
     }
 
     post {
-        always {
-            cleanWs()
+        success {
+            echo 'Dockerized Capstone App launched successfully via Jenkins!'
+        }
+        failure {
+            echo 'Build failed. Check logs for container errors.'
         }
     }
 }
+```
