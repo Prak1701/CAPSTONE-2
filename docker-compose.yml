@@ -17,7 +17,7 @@ services:
   backend_main:
     build: ./backend_main
     ports:
-      - "5000:3000"
+      - "5000:5000"
     environment:
       - MONGO_URI=mongodb://mongo:27017/CAPSTONE-2
       - FLASK_ENV=development

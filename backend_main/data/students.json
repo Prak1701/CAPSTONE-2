@@ -1,1 +1,1248 @@
-[]
+[
+  {
+    "data": {
+      "name": "Neha Jain",
+      "email": "neha.jain29@gmail.com",
+      "enrollment_no": "ENR2024001",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "7.76",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.648626",
+    "id": 1
+  },
+  {
+    "data": {
+      "name": "Yash Kapoor",
+      "email": "yash.kapoor41@gmail.com",
+      "enrollment_no": "ENR2024002",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.4",
+      "major": "IT"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.710508",
+    "id": 2
+  },
+  {
+    "data": {
+      "name": "Vikram Kapoor",
+      "email": "vikram.kapoor88@gmail.com",
+      "enrollment_no": "ENR2024003",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "6.76",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.738681",
+    "id": 3
+  },
+  {
+    "data": {
+      "name": "Aditi Patel",
+      "email": "aditi.patel29@gmail.com",
+      "enrollment_no": "ENR2024004",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "6.47",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.765481",
+    "id": 4
+  },
+  {
+    "data": {
+      "name": "Yash Chatterjee",
+      "email": "yash.chatterjee76@gmail.com",
+      "enrollment_no": "ENR2024005",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "9.26",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.791539",
+    "id": 5
+  },
+  {
+    "data": {
+      "name": "Harsh Malhotra",
+      "email": "harsh.malhotra97@gmail.com",
+      "enrollment_no": "ENR2024006",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "8.12",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.821259",
+    "id": 6
+  },
+  {
+    "data": {
+      "name": "Vikram Iyer",
+      "email": "vikram.iyer80@gmail.com",
+      "enrollment_no": "ENR2024007",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "8.16",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.848570",
+    "id": 7
+  },
+  {
+    "data": {
+      "name": "Harsh Agarwal",
+      "email": "harsh.agarwal95@gmail.com",
+      "enrollment_no": "ENR2024008",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.02",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.875927",
+    "id": 8
+  },
+  {
+    "data": {
+      "name": "Karan Bajaj",
+      "email": "karan.bajaj29@gmail.com",
+      "enrollment_no": "ENR2024009",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "7.72",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.901089",
+    "id": 9
+  },
+  {
+    "data": {
+      "name": "Dev Pillai",
+      "email": "dev.pillai45@gmail.com",
+      "enrollment_no": "ENR2024010",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "8",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.926481",
+    "id": 10
+  },
+  {
+    "data": {
+      "name": "Ishita Sharma",
+      "email": "ishita.sharma74@gmail.com",
+      "enrollment_no": "ENR2024011",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "9.66",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.951600",
+    "id": 11
+  },
+  {
+    "data": {
+      "name": "Arjun Verma",
+      "email": "arjun.verma91@gmail.com",
+      "enrollment_no": "ENR2024012",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "7.47",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:05.975708",
+    "id": 12
+  },
+  {
+    "data": {
+      "name": "Kabir Chatterjee",
+      "email": "kabir.chatterjee94@gmail.com",
+      "enrollment_no": "ENR2024013",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "6.28",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.000317",
+    "id": 13
+  },
+  {
+    "data": {
+      "name": "Dev Sharma",
+      "email": "dev.sharma13@gmail.com",
+      "enrollment_no": "ENR2024014",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "6.48",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.027067",
+    "id": 14
+  },
+  {
+    "data": {
+      "name": "Tanya Kapoor",
+      "email": "tanya.kapoor19@gmail.com",
+      "enrollment_no": "ENR2024015",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "6.37",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.051412",
+    "id": 15
+  },
+  {
+    "data": {
+      "name": "Yash Mehta",
+      "email": "yash.mehta76@gmail.com",
+      "enrollment_no": "ENR2024016",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "6.93",
+      "major": "IT"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.077605",
+    "id": 16
+  },
+  {
+    "data": {
+      "name": "Aditi Chopra",
+      "email": "aditi.chopra92@gmail.com",
+      "enrollment_no": "ENR2024017",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.2",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.102596",
+    "id": 17
+  },
+  {
+    "data": {
+      "name": "Kabir Patel",
+      "email": "kabir.patel26@gmail.com",
+      "enrollment_no": "ENR2024018",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "6.02",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.128890",
+    "id": 18
+  },
+  {
+    "data": {
+      "name": "Kabir Reddy",
+      "email": "kabir.reddy73@gmail.com",
+      "enrollment_no": "ENR2024019",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.92",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.153134",
+    "id": 19
+  },
+  {
+    "data": {
+      "name": "Dev Sharma",
+      "email": "dev.sharma87@gmail.com",
+      "enrollment_no": "ENR2024020",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.4",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.177860",
+    "id": 20
+  },
+  {
+    "data": {
+      "name": "Simran Saxena",
+      "email": "simran.saxena72@gmail.com",
+      "enrollment_no": "ENR2024021",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.77",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.202326",
+    "id": 21
+  },
+  {
+    "data": {
+      "name": "Manav Agarwal",
+      "email": "manav.agarwal70@gmail.com",
+      "enrollment_no": "ENR2024022",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "7.41",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.227332",
+    "id": 22
+  },
+  {
+    "data": {
+      "name": "Arjun Das",
+      "email": "arjun.das34@gmail.com",
+      "enrollment_no": "ENR2024023",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "7.35",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.253255",
+    "id": 23
+  },
+  {
+    "data": {
+      "name": "Vikram Mehta",
+      "email": "vikram.mehta84@gmail.com",
+      "enrollment_no": "ENR2024024",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.63",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.280122",
+    "id": 24
+  },
+  {
+    "data": {
+      "name": "Riya Kapoor",
+      "email": "riya.kapoor44@gmail.com",
+      "enrollment_no": "ENR2024025",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "6.03",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.305328",
+    "id": 25
+  },
+  {
+    "data": {
+      "name": "Tanya Saxena",
+      "email": "tanya.saxena26@gmail.com",
+      "enrollment_no": "ENR2024026",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "7.88",
+      "major": "IT"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.330377",
+    "id": 26
+  },
+  {
+    "data": {
+      "name": "Riya Patel",
+      "email": "riya.patel21@gmail.com",
+      "enrollment_no": "ENR2024027",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.31",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.357405",
+    "id": 27
+  },
+  {
+    "data": {
+      "name": "Kabir Chatterjee",
+      "email": "kabir.chatterjee75@gmail.com",
+      "enrollment_no": "ENR2024028",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "9.01",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.382434",
+    "id": 28
+  },
+  {
+    "data": {
+      "name": "Priya Jain",
+      "email": "priya.jain20@gmail.com",
+      "enrollment_no": "ENR2024029",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.56",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.407107",
+    "id": 29
+  },
+  {
+    "data": {
+      "name": "Tanya Gupta",
+      "email": "tanya.gupta62@gmail.com",
+      "enrollment_no": "ENR2024030",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "9.73",
+      "major": "IT"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.432472",
+    "id": 30
+  },
+  {
+    "data": {
+      "name": "Riya Singh",
+      "email": "riya.singh20@gmail.com",
+      "enrollment_no": "ENR2024031",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "6.55",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.457270",
+    "id": 31
+  },
+  {
+    "data": {
+      "name": "Sanya Singh",
+      "email": "sanya.singh99@gmail.com",
+      "enrollment_no": "ENR2024032",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.53",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.481405",
+    "id": 32
+  },
+  {
+    "data": {
+      "name": "Rohan Agarwal",
+      "email": "rohan.agarwal15@gmail.com",
+      "enrollment_no": "ENR2024033",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.89",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.505815",
+    "id": 33
+  },
+  {
+    "data": {
+      "name": "Neha Mehta",
+      "email": "neha.mehta29@gmail.com",
+      "enrollment_no": "ENR2024034",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "6.81",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.529978",
+    "id": 34
+  },
+  {
+    "data": {
+      "name": "Rahul Iyer",
+      "email": "rahul.iyer35@gmail.com",
+      "enrollment_no": "ENR2024035",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "8.84",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.555335",
+    "id": 35
+  },
+  {
+    "data": {
+      "name": "Arjun Kohli",
+      "email": "arjun.kohli27@gmail.com",
+      "enrollment_no": "ENR2024036",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "6.6",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.580748",
+    "id": 36
+  },
+  {
+    "data": {
+      "name": "Harsh Nair",
+      "email": "harsh.nair31@gmail.com",
+      "enrollment_no": "ENR2024037",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "7.27",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.605533",
+    "id": 37
+  },
+  {
+    "data": {
+      "name": "Yash Pillai",
+      "email": "yash.pillai98@gmail.com",
+      "enrollment_no": "ENR2024038",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "8.19",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.630367",
+    "id": 38
+  },
+  {
+    "data": {
+      "name": "Arjun Patel",
+      "email": "arjun.patel75@gmail.com",
+      "enrollment_no": "ENR2024039",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "6.71",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.654672",
+    "id": 39
+  },
+  {
+    "data": {
+      "name": "Nisha Das",
+      "email": "nisha.das14@gmail.com",
+      "enrollment_no": "ENR2024040",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "8.29",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.678982",
+    "id": 40
+  },
+  {
+    "data": {
+      "name": "Rohan Mehta",
+      "email": "rohan.mehta24@gmail.com",
+      "enrollment_no": "ENR2024041",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.92",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.703304",
+    "id": 41
+  },
+  {
+    "data": {
+      "name": "Riya Agarwal",
+      "email": "riya.agarwal80@gmail.com",
+      "enrollment_no": "ENR2024042",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "8.9",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.729155",
+    "id": 42
+  },
+  {
+    "data": {
+      "name": "Neha Gupta",
+      "email": "neha.gupta86@gmail.com",
+      "enrollment_no": "ENR2024043",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.49",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.753326",
+    "id": 43
+  },
+  {
+    "data": {
+      "name": "Nisha Saxena",
+      "email": "nisha.saxena45@gmail.com",
+      "enrollment_no": "ENR2024044",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.49",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.778562",
+    "id": 44
+  },
+  {
+    "data": {
+      "name": "Dev Mehta",
+      "email": "dev.mehta43@gmail.com",
+      "enrollment_no": "ENR2024045",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "6.14",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.802999",
+    "id": 45
+  },
+  {
+    "data": {
+      "name": "Vikram Sharma",
+      "email": "vikram.sharma58@gmail.com",
+      "enrollment_no": "ENR2024046",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "7.1",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.828052",
+    "id": 46
+  },
+  {
+    "data": {
+      "name": "Ishita Agarwal",
+      "email": "ishita.agarwal65@gmail.com",
+      "enrollment_no": "ENR2024047",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "8.99",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.854125",
+    "id": 47
+  },
+  {
+    "data": {
+      "name": "Vikram Gupta",
+      "email": "vikram.gupta17@gmail.com",
+      "enrollment_no": "ENR2024048",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "9.32",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.881930",
+    "id": 48
+  },
+  {
+    "data": {
+      "name": "Vikram Patel",
+      "email": "vikram.patel71@gmail.com",
+      "enrollment_no": "ENR2024049",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "7.91",
+      "major": "IT"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.910617",
+    "id": 49
+  },
+  {
+    "data": {
+      "name": "Tanya Pillai",
+      "email": "tanya.pillai32@gmail.com",
+      "enrollment_no": "ENR2024050",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "9.85",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.938184",
+    "id": 50
+  },
+  {
+    "data": {
+      "name": "Vikram Kohli",
+      "email": "vikram.kohli47@gmail.com",
+      "enrollment_no": "ENR2024051",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "9.05",
+      "major": "IT"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.966171",
+    "id": 51
+  },
+  {
+    "data": {
+      "name": "Mansi Agarwal",
+      "email": "mansi.agarwal59@gmail.com",
+      "enrollment_no": "ENR2024052",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "8.71",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:06.993713",
+    "id": 52
+  },
+  {
+    "data": {
+      "name": "Aditi Bajaj",
+      "email": "aditi.bajaj38@gmail.com",
+      "enrollment_no": "ENR2024053",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "7.96",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.019213",
+    "id": 53
+  },
+  {
+    "data": {
+      "name": "Tanya Mehta",
+      "email": "tanya.mehta29@gmail.com",
+      "enrollment_no": "ENR2024054",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "9.76",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.045984",
+    "id": 54
+  },
+  {
+    "data": {
+      "name": "Vikram Kohli",
+      "email": "vikram.kohli50@gmail.com",
+      "enrollment_no": "ENR2024055",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "6.76",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.072734",
+    "id": 55
+  },
+  {
+    "data": {
+      "name": "Yash Pillai",
+      "email": "yash.pillai19@gmail.com",
+      "enrollment_no": "ENR2024056",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.12",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.098063",
+    "id": 56
+  },
+  {
+    "data": {
+      "name": "Ishita Malhotra",
+      "email": "ishita.malhotra69@gmail.com",
+      "enrollment_no": "ENR2024057",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "6.48",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.123954",
+    "id": 57
+  },
+  {
+    "data": {
+      "name": "Simran Patel",
+      "email": "simran.patel32@gmail.com",
+      "enrollment_no": "ENR2024058",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "7.99",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.149451",
+    "id": 58
+  },
+  {
+    "data": {
+      "name": "Dev Pillai",
+      "email": "dev.pillai31@gmail.com",
+      "enrollment_no": "ENR2024059",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "7.77",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.174198",
+    "id": 59
+  },
+  {
+    "data": {
+      "name": "Simran Malhotra",
+      "email": "simran.malhotra27@gmail.com",
+      "enrollment_no": "ENR2024060",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "9.31",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.201029",
+    "id": 60
+  },
+  {
+    "data": {
+      "name": "Rohan Singh",
+      "email": "rohan.singh41@gmail.com",
+      "enrollment_no": "ENR2024061",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "8.63",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.226200",
+    "id": 61
+  },
+  {
+    "data": {
+      "name": "Simran Kapoor",
+      "email": "simran.kapoor83@gmail.com",
+      "enrollment_no": "ENR2024062",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "9.39",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.250867",
+    "id": 62
+  },
+  {
+    "data": {
+      "name": "Ishita Agarwal",
+      "email": "ishita.agarwal68@gmail.com",
+      "enrollment_no": "ENR2024063",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.56",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.275106",
+    "id": 63
+  },
+  {
+    "data": {
+      "name": "Vikram Reddy",
+      "email": "vikram.reddy93@gmail.com",
+      "enrollment_no": "ENR2024064",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "6.95",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.301259",
+    "id": 64
+  },
+  {
+    "data": {
+      "name": "Arjun Jain",
+      "email": "arjun.jain62@gmail.com",
+      "enrollment_no": "ENR2024065",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "6.24",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.325968",
+    "id": 65
+  },
+  {
+    "data": {
+      "name": "Priya Bajaj",
+      "email": "priya.bajaj59@gmail.com",
+      "enrollment_no": "ENR2024066",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "9.7",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.350835",
+    "id": 66
+  },
+  {
+    "data": {
+      "name": "Riya Bajaj",
+      "email": "riya.bajaj54@gmail.com",
+      "enrollment_no": "ENR2024067",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "8.09",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.375815",
+    "id": 67
+  },
+  {
+    "data": {
+      "name": "Simran Pillai",
+      "email": "simran.pillai98@gmail.com",
+      "enrollment_no": "ENR2024068",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.8",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.401416",
+    "id": 68
+  },
+  {
+    "data": {
+      "name": "Rohan Jain",
+      "email": "rohan.jain64@gmail.com",
+      "enrollment_no": "ENR2024069",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.34",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.426818",
+    "id": 69
+  },
+  {
+    "data": {
+      "name": "Nisha Gupta",
+      "email": "nisha.gupta54@gmail.com",
+      "enrollment_no": "ENR2024070",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "8.23",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.452995",
+    "id": 70
+  },
+  {
+    "data": {
+      "name": "Ishita Kohli",
+      "email": "ishita.kohli27@gmail.com",
+      "enrollment_no": "ENR2024071",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.05",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.478391",
+    "id": 71
+  },
+  {
+    "data": {
+      "name": "Kabir Kohli",
+      "email": "kabir.kohli55@gmail.com",
+      "enrollment_no": "ENR2024072",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "9.87",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.503776",
+    "id": 72
+  },
+  {
+    "data": {
+      "name": "Rohan Sharma",
+      "email": "rohan.sharma41@gmail.com",
+      "enrollment_no": "ENR2024073",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "8.83",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.530334",
+    "id": 73
+  },
+  {
+    "data": {
+      "name": "Priya Reddy",
+      "email": "priya.reddy66@gmail.com",
+      "enrollment_no": "ENR2024074",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "7.68",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.555946",
+    "id": 74
+  },
+  {
+    "data": {
+      "name": "Mansi Sharma",
+      "email": "mansi.sharma44@gmail.com",
+      "enrollment_no": "ENR2024075",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "7.29",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.580971",
+    "id": 75
+  },
+  {
+    "data": {
+      "name": "Sanya Das",
+      "email": "sanya.das78@gmail.com",
+      "enrollment_no": "ENR2024076",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "6.7",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.606405",
+    "id": 76
+  },
+  {
+    "data": {
+      "name": "Mansi Saxena",
+      "email": "mansi.saxena95@gmail.com",
+      "enrollment_no": "ENR2024077",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "7.61",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.631299",
+    "id": 77
+  },
+  {
+    "data": {
+      "name": "Simran Agarwal",
+      "email": "simran.agarwal59@gmail.com",
+      "enrollment_no": "ENR2024078",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "6.83",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.656500",
+    "id": 78
+  },
+  {
+    "data": {
+      "name": "Rohan Pillai",
+      "email": "rohan.pillai59@gmail.com",
+      "enrollment_no": "ENR2024079",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "7.23",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.681078",
+    "id": 79
+  },
+  {
+    "data": {
+      "name": "Sanya Patel",
+      "email": "sanya.patel47@gmail.com",
+      "enrollment_no": "ENR2024080",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "9.35",
+      "major": "IT"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.705896",
+    "id": 80
+  },
+  {
+    "data": {
+      "name": "Yash Chopra",
+      "email": "yash.chopra57@gmail.com",
+      "enrollment_no": "ENR2024081",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "8.34",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.730271",
+    "id": 81
+  },
+  {
+    "data": {
+      "name": "Mansi Bajaj",
+      "email": "mansi.bajaj42@gmail.com",
+      "enrollment_no": "ENR2024082",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "6.12",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.755068",
+    "id": 82
+  },
+  {
+    "data": {
+      "name": "Arjun Chatterjee",
+      "email": "arjun.chatterjee12@gmail.com",
+      "enrollment_no": "ENR2024083",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "8.5",
+      "major": "CE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.780510",
+    "id": 83
+  },
+  {
+    "data": {
+      "name": "Neha Reddy",
+      "email": "neha.reddy32@gmail.com",
+      "enrollment_no": "ENR2024084",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "7.68",
+      "major": "CSE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.805966",
+    "id": 84
+  },
+  {
+    "data": {
+      "name": "Rahul Patel",
+      "email": "rahul.patel52@gmail.com",
+      "enrollment_no": "ENR2024085",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "6.96",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.831517",
+    "id": 85
+  },
+  {
+    "data": {
+      "name": "Dev Kapoor",
+      "email": "dev.kapoor74@gmail.com",
+      "enrollment_no": "ENR2024086",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "9.43",
+      "major": "CS"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.857073",
+    "id": 86
+  },
+  {
+    "data": {
+      "name": "Arjun Verma",
+      "email": "arjun.verma33@gmail.com",
+      "enrollment_no": "ENR2024087",
+      "degree": "BCA",
+      "graduation_year": "2024",
+      "gpa": "6.1",
+      "major": "ME"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.881777",
+    "id": 87
+  },
+  {
+    "data": {
+      "name": "Nisha Singh",
+      "email": "nisha.singh36@gmail.com",
+      "enrollment_no": "ENR2024088",
+      "degree": "B.Tech",
+      "graduation_year": "2024",
+      "gpa": "8.7",
+      "major": "IT"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.907582",
+    "id": 88
+  },
+  {
+    "data": {
+      "name": "Ishita Saxena",
+      "email": "ishita.saxena45@gmail.com",
+      "enrollment_no": "ENR2024089",
+      "degree": "B.Sc",
+      "graduation_year": "2024",
+      "gpa": "7.21",
+      "major": "ECE"
+    },
+    "uploaded_by": "shi@st.niituniversity.in",
+    "created_at": "2025-11-27T13:29:07.932980",
+    "id": 89
+  }
+]

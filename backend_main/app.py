@@ -1682,7 +1682,10 @@ def university_records():
     students = get_all_students()
     return jsonify({"count": len(students), "students": students})
 
+# Health check endpoint (Fixes /api 404)
+@app.route("/api", methods=["GET"])
+def api_health():
+    return jsonify({"status": "ok", "message": "Backend is running"}), 200
+
 if __name__ == "__main__":
-    # Listen on all interfaces (0.0.0.0) so it's accessible from other devices
-    # Using port 3000 instead of 5000 to avoid firewall issues
-    app.run(host="0.0.0.0", port=3000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
